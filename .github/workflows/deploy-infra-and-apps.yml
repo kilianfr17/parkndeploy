@@ -63,6 +63,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+    - name: Inject app version from git tag
+      run: |
+        echo "VITE_APP_VERSION=${GITHUB_REF_NAME}" >> $GITHUB_ENV
+
     - name: Build the app
       run: npm install && npm run build
       working-directory: ./frontend    
