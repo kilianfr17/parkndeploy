@@ -4,12 +4,7 @@ on:
     types:
       - completed
     conclusion: success
-
-# on
-# ...
-
-
-
+    
 env: 
   AZURE_RG_NAME: rg-${{ vars.PROJECT_NAME }}-${{ vars.AZURE_RESOURCE_IDENTIFIER }}
   
