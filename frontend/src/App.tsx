@@ -1,4 +1,5 @@
 import "./App.css";
+const appVersion = import.meta.env.VITE_APP_VERSION;
 import { useQuery } from "@tanstack/react-query";
 import ParkingsAngersEndpointsQueryMethods, {
   PARKINGS_QUERY_KEY,
@@ -21,7 +22,7 @@ function App() {
   return (
     <div className="flex flex-col gap-5 items-center">
       <h1 className="text-2xl font-bold text-center">
-        Where can I Park in Angers ? 👀
+        Where can I Park in Angers ? 👀 {appVersion}
       </h1>
       <ParkingListFilters
         onChange={(parkingName: string) => {
