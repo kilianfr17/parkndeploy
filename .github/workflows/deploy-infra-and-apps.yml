@@ -103,7 +103,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: frontend-dist
-        path: frontend/dist
+        path: ./frontend/dist
 
     - name: Login to Azure 
       uses: azure/login@v2
@@ -134,7 +134,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: backend-publish
-        path: backend/publish
+        path: ./backend/publish
 
     - name: Login to Azure 
       uses: azure/login@v2
