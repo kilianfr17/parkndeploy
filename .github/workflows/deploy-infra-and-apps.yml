@@ -109,6 +109,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: deploy_infrastructure
     environment: production
+    permissions:
+      # Require write permission to Fetch an OIDC token (required for federated credential) and write it
+      # It will be automatically used on actions / cli that needs it
+      id-token: write
+      contents : read
 
     steps:
     - name: Checkout repository
@@ -146,6 +151,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: deploy_infrastructure
     environment: production
+    permissions:
+      # Require write permission to Fetch an OIDC token (required for federated credential) and write it
+      # It will be automatically used on actions / cli that needs it
+      id-token: write
+      contents : read
 
     steps:
     - name: Checkout repository
