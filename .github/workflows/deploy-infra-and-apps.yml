@@ -3,6 +3,7 @@ on:
     workflows: ["Ci_build"]
     types:
       - completed
+    conclusion: success
 
 # on
 # ...
