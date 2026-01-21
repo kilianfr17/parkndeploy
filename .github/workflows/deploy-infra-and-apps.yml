@@ -142,7 +142,7 @@ jobs:
         skip_api_build: true   
 
 
-  build_backend:
+  deploy_backend:
     runs-on: ubuntu-latest
     needs: deploy_infrastructure
     environment: production
